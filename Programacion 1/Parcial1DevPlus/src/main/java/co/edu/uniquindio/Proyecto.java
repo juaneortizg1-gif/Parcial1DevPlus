@@ -1,78 +1,119 @@
 package co.edu.uniquindio;
 
+import java.time.LocalDate;
+
 public class Proyecto {
-    private String codigo;
-    private String fechaSoli;
-    private String fechaIni;
-    private String entrega;
-    private String estado;
-    private String metodoPago;
-    private int valorTotal;
-
-    public Proyecto (String codigo, String fechaSoli, String fechaIni, String entrega,
-                     String estado, String metodoPago,int valorTotal){
-        this.codigo=codigo;
-        this.fechaSoli=fechaSoli;
-        this.fechaIni=fechaIni;
-        this.entrega=entrega;
-        this.estado=estado;
-        this.metodoPago=metodoPago;
-        this.valorTotal=valorTotal;
-    }
-
-    public String getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(String codigo) {
+    private int codigo;
+    private LocalDate fechaSoli;
+    private LocalDate fechaIni;
+    private LocalDate entrega;
+    private EstadoProyecto estado;
+    private MetodoDePago metodoPago;
+    private double valorTotal;
+    private Desarrollador[] desarrolladores;
+    private int cantidadDesarrolladores;
+    private ServicioAdicional[] servicios;
+    private int cantidadServicios;
+    public Proyecto(int codigo, LocalDate fechaSoli, LocalDate fechaIni,
+                    LocalDate entrega, MetodoDePago metodoPago) {
         this.codigo = codigo;
-    }
-
-    public String getFechaSoli() {
-        return fechaSoli;
-    }
-
-    public void setFechaSoli(String fechaSoli) {
         this.fechaSoli = fechaSoli;
-    }
-
-    public String getFechaIni() {
-        return fechaIni;
-    }
-
-    public void setFechaIni(String fechaIni) {
         this.fechaIni = fechaIni;
-    }
-
-    public String getEntrega() {
-        return entrega;
-    }
-
-    public void setEntrega(String entrega) {
         this.entrega = entrega;
+        this.metodoPago = metodoPago;
+        this.estado = EstadoProyecto.PENDIENTE;
+        this.valorTotal = 0;
+        this.desarrolladores = new Desarrollador[10];
+        this.cantidadDesarrolladores = 0;
+        this.servicios = new ServicioAdicional[10];
+        this.cantidadServicios = 0;
     }
 
-    public String getEstado() {
+    public EstadoProyecto getEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public int getCodigo() {
+        return codigo;
     }
 
-    public String getMetodoPago() {
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public LocalDate getFechaSoli() {
+        return fechaSoli;
+    }
+
+    public void setFechaSoli(LocalDate fechaSoli) {
+        this.fechaSoli = fechaSoli;
+    }
+
+    public LocalDate getFechaIni() {
+        return fechaIni;
+    }
+
+    public void setFechaIni(LocalDate fechaIni) {
+        this.fechaIni = fechaIni;
+    }
+
+    public LocalDate getEntrega() {
+        return entrega;
+    }
+
+    public void setEntrega(LocalDate entrega) {
+        this.entrega = entrega;
+    }
+
+    public MetodoDePago getMetodoPago() {
         return metodoPago;
     }
 
-    public void setMetodoPago(String metodoPago) {
+    public void setMetodoPago(MetodoDePago metodoPago) {
         this.metodoPago = metodoPago;
     }
 
-    public int getValorTotal() {
+    public double getValorTotal() {
         return valorTotal;
     }
 
-    public void setValorTotal(int valorTotal) {
+    public void setValorTotal(double valorTotal) {
         this.valorTotal = valorTotal;
+    }
+
+    public Desarrollador[] getDesarrolladores() {
+        return desarrolladores;
+    }
+
+    public void setDesarrolladores(Desarrollador[] desarrolladores) {
+        this.desarrolladores = desarrolladores;
+    }
+
+    public int getCantidadDesarrolladores() {
+        return cantidadDesarrolladores;
+    }
+
+    public void setCantidadDesarrolladores(int cantidadDesarrolladores) {
+        this.cantidadDesarrolladores = cantidadDesarrolladores;
+    }
+
+    public ServicioAdicional[] getServicios() {
+        return servicios;
+    }
+
+    public void setServicios(ServicioAdicional[] servicios) {
+        this.servicios = servicios;
+    }
+
+    public int getCantidadServicios() {
+        return cantidadServicios;
+    }
+
+    public void setCantidadServicios(int cantidadServicios) {
+        this.cantidadServicios = cantidadServicios;
+    }
+
+    public void setEstado(EstadoProyecto estado) {
+        this.estado = estado;
     }
 }
