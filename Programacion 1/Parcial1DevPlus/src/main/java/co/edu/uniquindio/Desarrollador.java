@@ -1,16 +1,16 @@
 package co.edu.uniquindio;
 
 public class Desarrollador {
-    private String codigo;
-    private String nivel;
+    private int codigo;
+    private NivelProgramador nivel;
     private String equipoTrabajo;
-    private String maxProyectos;
-    private int tarifaDia;
-    private String disponibilidad;
+    private int maxProyectos;
+    private double tarifaDia;
+    private EstadoDesarrollador disponibilidad;
 
 
-    public Desarrollador(String codigo, String nivel, String equipoTrabajo,
-                         String maxProyectos, int tarifaDia, String disponibilidad){
+    public Desarrollador(int codigo, NivelProgramador nivel, String equipoTrabajo,
+                         int maxProyectos, double tarifaDia, EstadoDesarrollador disponibilidad){
         this.codigo= codigo;
         this.nivel= nivel;
         this.equipoTrabajo=equipoTrabajo;
@@ -18,19 +18,16 @@ public class Desarrollador {
         this.tarifaDia=tarifaDia;
         this.disponibilidad=disponibilidad;
     }
-    public String getCodigo(){
+
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
-    public String getNivel() {
+    public NivelProgramador getNivel() {
         return nivel;
     }
 
-    public void setNivel(String nivel) {
+    public void setNivel(NivelProgramador nivel) {
         this.nivel = nivel;
     }
 
@@ -42,28 +39,32 @@ public class Desarrollador {
         this.equipoTrabajo = equipoTrabajo;
     }
 
-    public String getMaxProyectos() {
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public int getMaxProyectos() {
         return maxProyectos;
     }
 
-    public void setMaxProyectos(String maxProyectos) {
-        this.maxProyectos = maxProyectos;
-    }
-
-    public int getTarifaDia() {
+    public double getTarifaDia() {
         return tarifaDia;
     }
 
-    public void setTarifaDia(int tarifaDia) {
+    public void setTarifaDia(double tarifaDia) {
         this.tarifaDia = tarifaDia;
     }
 
-    public String getDisponibilidad() {
+    public EstadoDesarrollador getDisponibilidad() {
         return disponibilidad;
     }
 
-    public void setDisponibilidad(String disponibilidad) {
+    public void setDisponibilidad(EstadoDesarrollador disponibilidad) {
         this.disponibilidad = disponibilidad;
+    }
+
+    public void setMaxProyectos(int maxProyectos) {
+        this.maxProyectos = maxProyectos;
     }
 }
 
