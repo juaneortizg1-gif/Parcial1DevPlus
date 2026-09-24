@@ -10,13 +10,13 @@ public class Desarrollador {
 
 
     public Desarrollador(int codigo, NivelProgramador nivel, String equipoTrabajo,
-                         int maxProyectos, double tarifaDia, EstadoDesarrollador disponibilidad){
+                         int maxProyectos, double tarifaDia){
         this.codigo= codigo;
         this.nivel= nivel;
         this.equipoTrabajo=equipoTrabajo;
         this.maxProyectos=maxProyectos;
         this.tarifaDia=tarifaDia;
-        this.disponibilidad=disponibilidad;
+        this.disponibilidad = EstadoDesarrollador.DISPONIBLE;
     }
 
     public int getCodigo() {

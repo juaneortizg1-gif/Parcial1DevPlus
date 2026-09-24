@@ -1,7 +1,7 @@
 package co.edu.uniquindio;
 
 public enum EstadoDesarrollador {
-    DISPOINIBLE,
+    DISPONIBLE,
     ASIGNADO,
     OCUPADO,
     EN_CAPACITACION

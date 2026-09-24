@@ -3,25 +3,27 @@ package co.edu.uniquindio;
 import javax.naming.PartialResultException;
 
 public class ServicioAdicional {
-    private String codigo;
+    private int codigo;
     private String nombre;
     private String descripcion;
-    private int precio;
-    private String disponibilidad;
+    private double precio;
+    private boolean disponibilidad;
 
-    public ServicioAdicional( String codigo,String nombe, String descripcion,
-                              int precio, String disponibilidad){
+    public ServicioAdicional( int codigo,String nombre, String descripcion,
+                              double precio, boolean disponibilidad){
         this.codigo=codigo;
         this.nombre=nombre;
         this.descripcion=descripcion;
         this.precio= precio;
         this.disponibilidad=disponibilidad;
     }
-    public String getCodigo(){
+
+    public int getCodigo() {
         return codigo;
     }
-    public void setcodigo(String codigo){
-        this.codigo=codigo;
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public String getNombre() {
@@ -40,19 +42,19 @@ public class ServicioAdicional {
         this.descripcion = descripcion;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
-    public String getDisponibilidad() {
+    public boolean isDisponibilidad() {
         return disponibilidad;
     }
 
-    public void setDisponibilidad(String disponibilidad) {
+    public void setDisponibilidad(boolean disponibilidad) {
         this.disponibilidad = disponibilidad;
     }
 }
