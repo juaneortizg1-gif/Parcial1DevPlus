@@ -3,13 +3,13 @@ package co.edu.uniquindio;
 public class Cliente {
     private String nombre;
     private String identificacion;
-    private int telefono;
+    private String telefono;
     private String correo;
     private String pais;
 
 
     public Cliente( String nombre, String identificacion,
-                    int telefono, String correo, String pais ){
+                    String telefono, String correo, String pais ){
 
         this.nombre =nombre;
         this.identificacion= identificacion;
@@ -30,10 +30,11 @@ public class Cliente {
         this.identificacion=identificacion;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
-    public void setTelefono(int telefono){
+
+    public void setTelefono(String telefono){
         this.telefono=telefono;
     }
 
@@ -52,5 +53,12 @@ public class Cliente {
     public void setPais(String pais) {
         this.pais = pais;
     }
+
+    public String toString() {
+        return nombre + " | ID: " + identificacion + " | Tel: " + telefono
+                + " | " + correo + " | " + pais;
+    }
+
+
 }
 

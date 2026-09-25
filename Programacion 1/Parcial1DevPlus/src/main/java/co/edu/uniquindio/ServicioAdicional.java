@@ -1,7 +1,5 @@
 package co.edu.uniquindio;
 
-import javax.naming.PartialResultException;
-
 public class ServicioAdicional {
     private int codigo;
     private String nombre;
@@ -10,12 +8,12 @@ public class ServicioAdicional {
     private boolean disponibilidad;
 
     public ServicioAdicional( int codigo,String nombre, String descripcion,
-                              double precio, boolean disponibilidad){
+                              double precio){
         this.codigo=codigo;
         this.nombre=nombre;
         this.descripcion=descripcion;
         this.precio= precio;
-        this.disponibilidad=disponibilidad;
+        this.disponibilidad=true;
     }
 
     public int getCodigo() {
@@ -57,6 +55,12 @@ public class ServicioAdicional {
     public void setDisponibilidad(boolean disponibilidad) {
         this.disponibilidad = disponibilidad;
     }
+
+    public String toString() {
+        return "Servicio #" + codigo + " | " + nombre + " | " + descripcion
+                + " | $" + precio + " | " + (disponibilidad ? "Disponible" : "No disponible");
+    }
+
 }
 
 

@@ -66,5 +66,10 @@ public class Desarrollador {
     public void setMaxProyectos(int maxProyectos) {
         this.maxProyectos = maxProyectos;
     }
+    public String toString() {
+        return "Dev #" + codigo + " | " + nivel + " | Equipo: " + equipoTrabajo
+                + " | Máx. proyectos: " + maxProyectos + " | $" + tarifaDia
+                + "/día | " + disponibilidad;
+    }
 }
 
