@@ -152,7 +152,8 @@ public class Main {
         static void verListados() {
             String[] listas = {"Clientes", "Desarrolladores", "Servicios adicionales", "Proyectos"};
             Object eleccion = elegir("¿Qué desea ver?", listas);
-            if (eleccion == null) return;
+            if (eleccion == null)
+                return;
 
             String texto = switch (eleccion.toString()) {
                 case "Clientes" -> devPlus.listarClientes();
