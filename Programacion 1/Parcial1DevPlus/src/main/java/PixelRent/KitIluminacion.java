@@ -29,4 +29,7 @@ public class KitIluminacion extends EquipoAudiovisual {
     public void setControlInalambrico(boolean controlInalambrico) {
         this.controlInalambrico = controlInalambrico;
     }
+    public double calcularTarifaHora() {
+        return controlInalambrico ? 10000 + 12000 : 10000;
+    }
 }

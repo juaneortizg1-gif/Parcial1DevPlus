@@ -27,4 +27,7 @@ public class Dron extends EquipoAudiovisual{
     public void setBateriaAdicional(boolean bateriaAdicional) {
         this.bateriaAdicional = bateriaAdicional;
     }
+    public double calcularTarifaHora() {
+        return bateriaAdicional ? 18000 + 20000 : 18000;
+    }
 }
