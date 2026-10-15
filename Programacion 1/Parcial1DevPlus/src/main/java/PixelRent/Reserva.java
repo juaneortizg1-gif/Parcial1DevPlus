@@ -1,5 +1,5 @@
 package PixelRent;
-
+import java.util.ArrayList;
 import java.time.LocalDate;
 
 public class Reserva {
@@ -7,13 +7,15 @@ public class Reserva {
     private LocalDate fecha;
     private TurnoUtilizacion turno;
     private EstadoReserva estado;
-
+    private Cliente cliente;
+    private ArrayList<DetalleReserva> detalles = new ArrayList<>();
     public Reserva(int codigoReserva, LocalDate fecha,
-                   TurnoUtilizacion turno, EstadoReserva estado) {
+                   TurnoUtilizacion turno, EstadoReserva estado, Cliente cliente) {
         this.codigoReserva = codigoReserva;
         this.fecha = fecha;
         this.turno = turno;
         this.estado = estado;
+        this.cliente = cliente;
 
 
     }
@@ -22,24 +24,12 @@ public class Reserva {
         return codigoReserva;
     }
 
-    public void setCodigoReserva(int codigoReserva) {
-        this.codigoReserva = codigoReserva;
-    }
-
     public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
-    }
-
     public TurnoUtilizacion getTurno() {
         return turno;
-    }
-
-    public void setTurno(TurnoUtilizacion turno) {
-        this.turno = turno;
     }
 
     public EstadoReserva getEstado() {
@@ -49,4 +39,18 @@ public class Reserva {
     public void setEstado(EstadoReserva estado) {
         this.estado = estado;
     }
+    public Cliente getCliente()
+
+    {
+        return cliente;
+
+    }
+    public void agregarDetalle(DetalleReserva detalle) {
+        detalles.add(detalle);
+    }
+
+    public ArrayList<DetalleReserva> getDetalles() {
+        return detalles;
+    }
+
 }

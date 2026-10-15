@@ -3,13 +3,14 @@ package PixelRent;
 public abstract class EquipoAudiovisual {
     protected int codigo;
     protected String marca;
+    protected String modelo;
     protected EstadoEquipo estadoEquipo;
 
-    public EquipoAudiovisual (int codigo, String marca, EstadoEquipo estadoEquipo){
-
-        this.codigo=codigo;
-        this.marca=marca;
-        this.estadoEquipo=estadoEquipo;
+    public EquipoAudiovisual(int codigo, String marca, String modelo, EstadoEquipo estadoEquipo) {
+        this.codigo = codigo;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.estadoEquipo = estadoEquipo;
 
     }
 
